@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kode Mono", monospace;
+    font-style: normal;
+}
+
+body {
+    background: #f3f5fc;
+    min-height: calc(100vh - (100px + 100px));
+}
+
+.logoAlura {
+    width: 10%;
+    margin-top: 20px;
+    opacity: 0.4;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.textoIngresado {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 10%;
+    border: none;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+}
+
+.textoIngresado::placeholder {
+    color: #0a3871bb;
+}
+
+.textoIngresado:focus, .textoUsuario:active {
+    border: none;
+    outline: none;
+}
+
+.condiciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.condiciones p {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 150%;
+    color: #812222;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.btnEncriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.btnDesencriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3871;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.btnDesencriptar:hover, .btnEncriptar:hover {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 2.5px solid #136cd8;
+}
+
+.textoResultado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: white;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.textoResultado img {
+    display: initial;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 10%;
+}
+
+.mensajeFinal {
+    display: flex;
+    width: 80%;
+    top: 10%;
+    bottom: 20%;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: white;
+    border-radius: 32px;
+    padding-top: 10%;
+}
+
+.mensajeFinal:focus, .mensajeFinal:active {
+    border: none;
+    outline: none;
+}
+
+.mensajeDefaultEncriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    text-align: center;
+}
+
+.mensajeDefaultEncriptado h2 {
+    width: 60%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343a40;
+}
+
+.mensajeDefaultEncriptado p {
+    width: 85%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.botonCopiar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 25.5%;
+    top: 90%;
+}
+
+.btnCopiar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 65%;
+    background-color: white;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3871;
+    cursor: pointer;
+}
+
+.btnCopiar:hover {
+    margin: 0.3%;
+    width: 64.5%;
+    padding: 1.8%;
+    line-height: 18px;
+    border: 2px solid #136cd8;
+}
+
+/*Responsive dising*/
+
+@media (max-width: 57.5em) {
+    .logoAlura {
+        width: 15%;
+    }
+    header h1 {
+        text-align: left;
+        margin-top: 2%;
+        margin-left: 2%;
+        font-size: 6.5vw;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .encriptar {
+        width: 100%;
+    }
+
+    .textoIngresado {
+        width: 100%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+        font-size: 5vw;
+    }
+
+    .condiciones {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .condiciones p {
+        font-size: 2.5dvw;
+        width: 70%;
+    }
+
+    .botones {
+        width: 80%;
+        left: 10%;
+        top: 74%;
+    }
+
+    .btnEncriptar, .btnDesencriptar {
+        width: 40%;
+        border-radius: 16px;
+        font-size: 3.5vw;
+    }
+
+    .btnEncriptar:hover {
+        border: 2px solid #f3f5fc;
+    } 
+    
+    .btnDesencriptar:hover {
+        border: 2px solid #0a3871;
+    }
+
+    .textoResultado {
+        width: 80%;
+        height: 65%;
+        left: 10%;
+        top: 88%;
+    }
+
+    .textoResultado img {
+        top: 7.5%;
+        display: initial;
+        position: center;
+
+    }
+
+    .mensajeFinal {
+        width: 100%;
+        height: 50%;
+        left: 10%;
+        top: 5%;
+        padding: 4%;
+        font-size: 5vw;
+    }
+
+    .mensajeDefaultEncriptado {
+        height: 20%;
+        width: 100%;
+        top: 60%;
+        font-size: 2.5vw;
+    }
+
+    .mensajeDefaultEncriptado p {
+        font-size: 12px;
+    }
+
+    .btnCopiar {
+        width: 60%;
+        height: 15%;
+        border-radius: 16px;
+        font-size: 3.5vw;
+    }
+
+    .btnCopiar:hover {
+        width: 58.5%;
+        border: 1px solid #136cd8; 
+    }
+
+}
+
+@media (min-width: 57.5em) {
+    .mensajeFinal {
+        width: 100%;
+        max-height: 60%;
+        left: 10%;
+        top: 5%;
+        padding: 4%;
+        font-size: 32px;
+    }
+}
